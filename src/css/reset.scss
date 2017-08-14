@@ -1,0 +1,85 @@
+div,
+h1,
+h2,
+h3,
+p,
+span,
+a,
+button,
+img,
+b,
+i,
+blockquote {
+	box-sizing: border-box;
+	border-radius: initial;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: normal;
+	line-height: initial;
+	border: none;
+	background: initial;
+	box-shadow: initial;
+	width: auto;
+	height: auto;
+	position: initial;
+	display: initial;
+	text-decoration: none;
+	text-align: left;
+}
+
+// Iframes need different value resets and cannot all be grouped
+iframe {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: initial;
+	box-shadow: initial;
+	position: initial;
+	display: initial;
+}
+
+// This is less a reset thing, however it is a global
+.cnhide {
+	display: none;
+}
+
+.cnclearboth {
+	clear: both;
+}
+
+// Widget and divs should be display block in all cases
+// We tend not to float many elements
+&,
+& div {
+	display: block;
+}
+
+// Scrollbars
+::-webkit-scrollbar {
+	width: 6px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-button {
+	display: none;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #9d9ea6;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: rgb(249, 250, 252);
+}
+
+::-webkit-scrollbar-thumb {
+	height: 50px;
+	background-color: rgb(226, 226, 226);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: #999;
+}

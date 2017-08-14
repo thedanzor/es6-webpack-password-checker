@@ -1,0 +1,19 @@
+@import 'vars'; /* Add the variables */
+@import 'mixins'; /* Add the mixins */
+
+.passwordChecker {
+	@import 'reset'; /* Reset the divs inside our widgets */
+
+	border-radius: 3px;
+	font-family: sans-serif;
+	color: #313131;
+	font-size: 12px;
+	background: $white;
+	clear: both;
+
+	/* Header Styling */
+	.password-message-wrapper {
+		opacity: 0.4;
+		padding: 8px 0px;
+	}
+}

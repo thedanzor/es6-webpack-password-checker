@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#00c6eb">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<script src="app.js"> </script>
+	<style>
+		body,
+		html {
+			padding: 30px;
+			margin: 0px;
+			font-family: 'Roboto', sans-serif;
+		}
+		input {
+			padding: 12px;
+			font-size: 14px;
+			border: 1px solid rgba(0,0,0,0.1);
+			width: 450px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="passwordChecker" class="passwordChecker">
+		<input type="password" placeholder="Enter your password..." />
+		<script> window.mySite.passwordChecker({
+			lang: 'en'
+		}); </script>
+	</div>
+</body>
+</html>
