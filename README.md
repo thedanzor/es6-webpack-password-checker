@@ -1,6 +1,7 @@
 ES6 / Webpack Example - Password Checker
 ===================
 
+![preview](./preview.png)
 
 This is a simple example of building 3rd party tooling or applications to be consumed by others.
 We look at some nice front-end practices while also exploring ES6, Webpack and babel.
