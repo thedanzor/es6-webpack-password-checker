@@ -7,13 +7,12 @@ export default function(results) {
 	const { lang } = config;
 	const { leng, symbols, caps, lowercase, numb, empty } = results;
 	const messageTemplate = viewTemplate('message');
+	const defaultTemplate = viewTemplate('defaultView');
 
 	container.innerHTML = '';
 	// Build new messages
 	const div = document.createElement('div');
 	div.className = 'password-feedback';
-
-	console.log(leng, symbols, caps, lowercase, numb);
 
 	if (leng === false) {
 		const lengMessage = messageTemplate(lang, 'leng', '12');
@@ -41,7 +40,7 @@ export default function(results) {
 	}
 
 	if (empty === true) {
-		const emptyMessage = messageTemplate(lang, 'initial');
+		const emptyMessage = defaultTemplate(lang, 'initial');
 		div.innerHTML = emptyMessage;
 	}
 

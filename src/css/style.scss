@@ -11,9 +11,18 @@
 	background: $white;
 	clear: both;
 
+	input {
+		margin-bottom: 10px;
+	}
+
 	/* Header Styling */
 	.password-message-wrapper {
 		opacity: 0.4;
-		padding: 8px 0px;
+		padding: 2px 0px;
+	}
+
+	.password-message-wrapper.warning {
+		opacity: 0.8;
+		color: #f00;
 	}
 }
