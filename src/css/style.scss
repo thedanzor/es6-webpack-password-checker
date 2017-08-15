@@ -3,6 +3,7 @@
 
 .passwordChecker {
 	@import 'reset'; /* Reset the divs inside our widgets */
+	@import 'tooltip'; /* Reset the divs inside our widgets */
 
 	border-radius: 3px;
 	font-family: sans-serif;
@@ -11,8 +12,11 @@
 	background: $white;
 	clear: both;
 
+	max-width: 476px;
+
 	input {
 		margin-bottom: 10px;
+		outline: 0px;
 	}
 
 	/* Header Styling */
@@ -25,4 +29,21 @@
 		opacity: 0.8;
 		color: #f00;
 	}
+
+	.password-status-wrapper {
+		height: 5px;
+		box-sizing: border-box;
+		margin-top: -10px;
+		margin-bottom: 10px;
+	}
+
+	.password-status-wrapper > div {
+		width: 20%;
+		height: 100%;
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		float: left;
+	}
+
+	@import 'strength';
 }

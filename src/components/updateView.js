@@ -5,14 +5,20 @@ export default function(results) {
 	const state = getState();
 	const { container, config } = state;
 	const { lang } = config;
-	const { leng, symbols, caps, lowercase, numb, empty } = results;
+	const { leng, symbols, caps, lowercase, numb, empty, strength } = results;
 	const messageTemplate = viewTemplate('message');
 	const defaultTemplate = viewTemplate('defaultView');
+	const statusTemplate = viewTemplate('status');
 
 	container.innerHTML = '';
 	// Build new messages
 	const div = document.createElement('div');
 	div.className = 'password-feedback';
+
+	if (strength > 0) {
+		const strengthView = statusTemplate(lang, strength);
+		div.innerHTML += strengthView;
+	}
 
 	if (leng === false) {
 		const lengMessage = messageTemplate(lang, 'leng', '12');

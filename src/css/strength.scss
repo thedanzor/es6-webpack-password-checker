@@ -1,0 +1,29 @@
+[data-status="1"] div.status-one,
+[data-status="2"] div.status-one,
+[data-status="3"] div.status-one,
+[data-status="4"] div.status-one,
+[data-status="5"] div.status-one {
+	background: #f90000;
+}
+
+[data-status="2"] div.status-two,
+[data-status="3"] div.status-two,
+[data-status="4"] div.status-two,
+[data-status="5"] div.status-two {
+	background: #f96100;
+}
+
+[data-status="3"] div.status-three,
+[data-status="4"] div.status-three,
+[data-status="5"] div.status-three {
+	background: #f9bd00;
+}
+
+[data-status="4"] div.status-four,
+[data-status="5"] div.status-four {
+	background: #f0f900;
+}
+
+[data-status="5"] div.status-five {
+	background: #44f900;
+}

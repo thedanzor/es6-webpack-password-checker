@@ -8,11 +8,11 @@ export default function(lang, strength) {
 				class="password-status-wrapper"
 				data-status="${strength}"
 				data-tooltip="${message}">
-				<div class="status-one"><div>
-				<div class="status-two"><div>
-				<div class="status-three"><div>
-				<div class="status-four"><div>
-				<div class="status-five"><div>
+				<div class="status-one"></div>
+				<div class="status-two"></div>
+				<div class="status-three"></div>
+				<div class="status-four"></div>
+				<div class="status-five"></div>
 			</div>
 		`;
 	return view;
