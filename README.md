@@ -24,6 +24,7 @@ We use Javascript, SASS, NPM, Webpack and Babel as our main dev dependencies.
  - Simple translations support also through ES6 template strings
  - UX feedback through Visual Strength bar & messages
  - A central location that handles resources and globals, good starting point for 'application state'
+ - CSS Tooltips
 
 ## NOTICE:
 
