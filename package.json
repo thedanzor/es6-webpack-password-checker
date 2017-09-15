@@ -6,19 +6,22 @@
 	"scripts": {
 		"build": "npm run && WEBPACK_ENV=build webpack --optimize-minimize",
 		"dev": "npm run && WEBPACK_ENV=dev webpack --progress --optimize-minimize --colors --watch",
-		"start": "npm run dev"
+		"start": "npm run dev",
+		"test": "ava"
 	},
 	"ava": {
 		"verbose": true,
-		"require": ["babel-register"],
+		"require": [
+			"babel-register"
+		],
 		"babel": "inherit"
 	},
 	"author": "Scott Jones <scott@thedanzorlabs.com>",
 	"homepage": "https://the-danzor.deviantart.com",
 	"private": true,
-	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "^7.1.2",
+		"ava": "^0.20.0",
 		"babel-core": "^6.25.0",
 		"babel-loader": "^7.1.0",
 		"babel-plugin-syntax-async-functions": "^6.13.0",
