@@ -7,8 +7,11 @@ import validate, {
   resetState
 } from '../src/components/validate';
 
-test('Validate Component - Check the length of a small password', t => {
+test.beforeEach(t => {
   resetState(); // Reset the strength value
+});
+
+test('Validate Component - Check the length of a small password', t => {
   checkLeng('pass');
 
   const { leng } = returnState();
@@ -17,7 +20,6 @@ test('Validate Component - Check the length of a small password', t => {
 });
 
 test('Validate Component - Check the length of a long password', t => {
-  resetState(); // Reset the strength value
   checkLeng('passwordthatisreallylong');
 
   const { leng } = returnState();
@@ -26,7 +28,6 @@ test('Validate Component - Check the length of a long password', t => {
 });
 
 test('Validate Component - Check password for symbols - no symbols', t => {
-  resetState(); // Reset the strength value
   checkSymbols('passwordthatisreallylong');
 
   const { symbols } = returnState();
@@ -35,7 +36,6 @@ test('Validate Component - Check password for symbols - no symbols', t => {
 });
 
 test('Validate Component - Check password for symbols - 3 symbols', t => {
-  resetState(); // Reset the strength value
   checkSymbols('password!thatisreally@long!');
 
   const { symbols } = returnState();
@@ -44,7 +44,6 @@ test('Validate Component - Check password for symbols - 3 symbols', t => {
 });
 
 test('Validate Component - Check mixed passwords for upper and lower case - not mixed', t => {
-  resetState(); // Reset the strength value
   checkMixed('thispasswordisonlylowercase');
 
   const { caps, lowercase, numb } = returnState();
@@ -55,7 +54,6 @@ test('Validate Component - Check mixed passwords for upper and lower case - not 
 });
 
 test('Validate Component - Check mixed passwords for upper and lower case - mixed', t => {
-  resetState(); // Reset the strength value
   checkMixed('HelloIAmMixedAnd!@lo1ng!');
 
   const { caps, lowercase, numb } = returnState();
@@ -66,7 +64,6 @@ test('Validate Component - Check mixed passwords for upper and lower case - mixe
 });
 
 test('Validate Component - Check mixed passwords for upper and lower case - all caps', t => {
-  resetState(); // Reset the strength value
   checkMixed('ALLCAPS');
 
   const { caps, lowercase, numb } = returnState();
@@ -77,7 +74,6 @@ test('Validate Component - Check mixed passwords for upper and lower case - all 
 });
 
 test('Validate Component - Check Password Strengths - high', t => {
-  resetState(); // Reset the strength value
   checkMixed('HelloIAmMixedAnd!@lo1ng!');
   checkSymbols('HelloIAmMixedAnd!@lo1ng!');
   checkLeng('HelloIAmMixedAnd!@lo1ng!');
