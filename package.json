@@ -8,12 +8,17 @@
     "dev":
       "npm run && WEBPACK_ENV=dev webpack --progress --optimize-minimize --colors --watch",
     "start": "npm run dev",
-    "test": "ava"
+    "test": "nyc ava --verbose"
   },
   "ava": {
     "verbose": true,
     "require": ["babel-register", "./test/helpers/setup-browser-env.js"],
-    "babel": "inherit"
+    "babel": "inherit",
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
   },
   "author": "Scott Jones <scott@thedanzorlabs.com>",
   "homepage": "https://the-danzor.deviantart.com",
@@ -44,6 +49,7 @@
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
     "node-sass": "^4.5.3",
+    "nyc": "^11.2.1",
     "postcss-loader": "^2.0.6",
     "prettier": "^1.4.4",
     "sass-loader": "^6.0.6",
