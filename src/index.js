@@ -9,6 +9,9 @@
 // Require the app
 import passwordChecker from './App';
 
+// For building the css
+require('./css/style.scss');
+
 // We are using the window object to house and execute the script
 
 // This is a practise i have gotten into to avoid methods being called

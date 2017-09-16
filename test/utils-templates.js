@@ -12,6 +12,11 @@ test('Template Utility - Setup and validate basic templates', t => {
   const statusTemplate = viewTemplate('status');
   const statusView = statusTemplate('en', 5);
 
+  // Show the status template with a completed template
+  const messageTemplate = viewTemplate('message');
+  const messageView = messageTemplate('en', 'caps');
+
+  // Test default view
   t.is(
     defaultView,
     `
@@ -20,6 +25,8 @@ test('Template Utility - Setup and validate basic templates', t => {
 			</div>
 		`
   );
+
+  // Test status view
   t.is(
     statusView,
     `
@@ -32,6 +39,16 @@ test('Template Utility - Setup and validate basic templates', t => {
 				<div class="status-three"></div>
 				<div class="status-four"></div>
 				<div class="status-five"></div>
+			</div>
+		`
+  );
+
+  // Test message view
+  t.is(
+    messageView,
+    `
+			<div class="password-message-wrapper warning">
+				Your password contains no Capitals
 			</div>
 		`
   );

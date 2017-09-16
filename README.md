@@ -35,3 +35,7 @@ I am not liable or responsible for any problems, damages etc coming from the use
 
 Please ensure you install all dependencies with `npm i`
 You can build or watch the project using: `npm run build` or `npm run dev`
+
+![test](./test.png)
+
+Unit tests are implemented with code coverage also. You can run `npm run test` to execute the unit tests. 
