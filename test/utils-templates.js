@@ -3,33 +3,33 @@ import { viewInit, viewTemplate } from '../src/utils/templateMap';
 import templates from '../src/views'; // Templates
 
 test('Template Utility - Setup and validate basic templates', t => {
-  viewInit(templates);
+	viewInit(templates);
 
-  const defaultTemplate = viewTemplate('defaultView');
-  const defaultView = defaultTemplate('en');
+	const defaultTemplate = viewTemplate('defaultView');
+	const defaultView = defaultTemplate('en');
 
-  // Show the status template with a completed template
-  const statusTemplate = viewTemplate('status');
-  const statusView = statusTemplate('en', 5);
+	// Show the status template with a completed template
+	const statusTemplate = viewTemplate('status');
+	const statusView = statusTemplate('en', 5);
 
-  // Show the status template with a completed template
-  const messageTemplate = viewTemplate('message');
-  const messageView = messageTemplate('en', 'caps');
+	// Show the status template with a completed template
+	const messageTemplate = viewTemplate('message');
+	const messageView = messageTemplate('en', 'caps');
 
-  // Test default view
-  t.is(
-    defaultView,
-    `
+	// Test default view
+	t.is(
+		defaultView,
+		`
 			<div class="password-message-wrapper">
 				Please enter a secure password
 			</div>
 		`
-  );
+	);
 
-  // Test status view
-  t.is(
-    statusView,
-    `
+	// Test status view
+	t.is(
+		statusView,
+		`
 			<div
 				class="password-status-wrapper"
 				data-status="5"
@@ -41,15 +41,15 @@ test('Template Utility - Setup and validate basic templates', t => {
 				<div class="status-five"></div>
 			</div>
 		`
-  );
+	);
 
-  // Test message view
-  t.is(
-    messageView,
-    `
+	// Test message view
+	t.is(
+		messageView,
+		`
 			<div class="password-message-wrapper warning">
 				Your password contains no Capitals
 			</div>
 		`
-  );
+	);
 });
